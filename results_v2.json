@@ -1,0 +1,2919 @@
+{
+  "project": "AetherNet Research Lab",
+  "version": "0.2.0",
+  "status": "experimental; benchmarks run locally on the host computer",
+  "warning": "These are established model families and an experimental hybrid. This does not establish first-ever novelty or superiority.",
+  "metrics_note": "Fit and predict time are wall-clock timings on this run and can vary by machine. Serialized model size is a storage proxy, not peak RAM. No energy measurement is made.",
+  "repeats": 3,
+  "n_samples": 900,
+  "datasets": {
+    "moons": {
+      "trials": [
+        {
+          "seed": 121,
+          "models": [
+            {
+              "model": "MLP",
+              "family": "Neural",
+              "accuracy": 0.9055555555555556,
+              "balanced_accuracy": 0.9055555555555556,
+              "macro_f1": 0.9055293136982495,
+              "fit_seconds": 0.05708323899989409,
+              "predict_seconds": 0.00020743300001413445,
+              "serialized_model_kb": 22.8603515625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Extreme Learning Machine",
+              "family": "Neural / fixed random features",
+              "accuracy": 0.9666666666666667,
+              "balanced_accuracy": 0.9666666666666667,
+              "macro_f1": 0.9666625509322139,
+              "fit_seconds": 0.0032398949997514137,
+              "predict_seconds": 0.00029835900022590067,
+              "serialized_model_kb": 8.244140625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "fixed width=192"
+            },
+            {
+              "model": "Hyperdimensional prototype",
+              "family": "Alternative representation",
+              "accuracy": 0.8722222222222222,
+              "balanced_accuracy": 0.8722222222222222,
+              "macro_f1": 0.8722182783419241,
+              "fit_seconds": 0.014606889999868145,
+              "predict_seconds": 0.0020173500001874345,
+              "serialized_model_kb": 40.7392578125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "dimensions=1024"
+            },
+            {
+              "model": "RBF network",
+              "family": "Neural / radial basis",
+              "accuracy": 0.8888888888888888,
+              "balanced_accuracy": 0.8888888888888888,
+              "macro_f1": 0.8888751697740461,
+              "fit_seconds": 0.10301000900017243,
+              "predict_seconds": 0.0006300249997366336,
+              "serialized_model_kb": 5.2333984375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "centers=40"
+            },
+            {
+              "model": "KNN",
+              "family": "Instance-based",
+              "accuracy": 0.9611111111111111,
+              "balanced_accuracy": 0.961111111111111,
+              "macro_f1": 0.9611003056404557,
+              "fit_seconds": 0.0021988829998917936,
+              "predict_seconds": 0.001214048000292678,
+              "serialized_model_kb": 25.49609375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Nearest centroid",
+              "family": "Prototype-based",
+              "accuracy": 0.8555555555555555,
+              "balanced_accuracy": 0.8555555555555555,
+              "macro_f1": 0.8555555555555555,
+              "fit_seconds": 0.0007157449999795062,
+              "predict_seconds": 0.0006859479999548057,
+              "serialized_model_kb": 0.611328125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Random forest",
+              "family": "Non-neural baseline",
+              "accuracy": 0.95,
+              "balanced_accuracy": 0.95,
+              "macro_f1": 0.9499984567424921,
+              "fit_seconds": 0.11098118400013846,
+              "predict_seconds": 0.0063892489997670054,
+              "serialized_model_kb": 598.7314453125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherNet gated expert",
+              "family": "Adaptive hybrid",
+              "accuracy": 0.9611111111111111,
+              "balanced_accuracy": 0.9611111111111111,
+              "macro_f1": 0.9611099107997161,
+              "fit_seconds": 0.10107870599995294,
+              "predict_seconds": 0.0010334520002288627,
+              "serialized_model_kb": 43.7236328125,
+              "specialist_call_rate": 0.19444444444444445,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherGrow",
+              "family": "Adaptive-width ELM candidate",
+              "accuracy": 0.9666666666666667,
+              "balanced_accuracy": 0.9666666666666667,
+              "macro_f1": 0.9666625509322139,
+              "fit_seconds": 0.012667113000134123,
+              "predict_seconds": 0.00020852500028922805,
+              "serialized_model_kb": 3.37890625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "selected width=64"
+            },
+            {
+              "model": "AetherCascade",
+              "family": "Three-stage adaptive cascade",
+              "accuracy": 0.9611111111111111,
+              "balanced_accuracy": 0.9611111111111111,
+              "macro_f1": 0.9611099107997161,
+              "fit_seconds": 0.13641485400012243,
+              "predict_seconds": 0.0014650279999841587,
+              "serialized_model_kb": 49.0810546875,
+              "specialist_call_rate": 0.2611111111111111,
+              "elm_call_rate": 0.19444444444444445,
+              "knn_call_rate": 0.06666666666666667,
+              "architecture_detail": "gate MLP<0.811; ELM<0.599"
+            }
+          ]
+        },
+        {
+          "seed": 152,
+          "models": [
+            {
+              "model": "MLP",
+              "family": "Neural",
+              "accuracy": 0.9277777777777778,
+              "balanced_accuracy": 0.9277777777777778,
+              "macro_f1": 0.9277220077220077,
+              "fit_seconds": 0.12040479000006599,
+              "predict_seconds": 0.00019366900005479692,
+              "serialized_model_kb": 23.65625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Extreme Learning Machine",
+              "family": "Neural / fixed random features",
+              "accuracy": 0.95,
+              "balanced_accuracy": 0.95,
+              "macro_f1": 0.9499984567424921,
+              "fit_seconds": 0.003138030999707553,
+              "predict_seconds": 0.00038897899958101334,
+              "serialized_model_kb": 8.244140625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "fixed width=192"
+            },
+            {
+              "model": "Hyperdimensional prototype",
+              "family": "Alternative representation",
+              "accuracy": 0.8611111111111112,
+              "balanced_accuracy": 0.8611111111111112,
+              "macro_f1": 0.8610725201444845,
+              "fit_seconds": 0.008386370000152965,
+              "predict_seconds": 0.0034248639999532315,
+              "serialized_model_kb": 40.7392578125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "dimensions=1024"
+            },
+            {
+              "model": "RBF network",
+              "family": "Neural / radial basis",
+              "accuracy": 0.8777777777777778,
+              "balanced_accuracy": 0.8777777777777778,
+              "macro_f1": 0.8777173913043479,
+              "fit_seconds": 0.09600118899970767,
+              "predict_seconds": 0.0005399100000431645,
+              "serialized_model_kb": 5.2333984375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "centers=40"
+            },
+            {
+              "model": "KNN",
+              "family": "Instance-based",
+              "accuracy": 0.9444444444444444,
+              "balanced_accuracy": 0.9444444444444444,
+              "macro_f1": 0.944437584887023,
+              "fit_seconds": 0.0007162340002651035,
+              "predict_seconds": 0.0010885540000344918,
+              "serialized_model_kb": 25.49609375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Nearest centroid",
+              "family": "Prototype-based",
+              "accuracy": 0.8611111111111112,
+              "balanced_accuracy": 0.8611111111111112,
+              "macro_f1": 0.8610725201444845,
+              "fit_seconds": 0.0008285590001833043,
+              "predict_seconds": 0.0005617750002784305,
+              "serialized_model_kb": 0.611328125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Random forest",
+              "family": "Non-neural baseline",
+              "accuracy": 0.9333333333333333,
+              "balanced_accuracy": 0.9333333333333333,
+              "macro_f1": 0.9333333333333333,
+              "fit_seconds": 0.10388278099981108,
+              "predict_seconds": 0.006910715999765671,
+              "serialized_model_kb": 552.4814453125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherNet gated expert",
+              "family": "Adaptive hybrid",
+              "accuracy": 0.9444444444444444,
+              "balanced_accuracy": 0.9444444444444444,
+              "macro_f1": 0.944437584887023,
+              "fit_seconds": 0.08317182999962824,
+              "predict_seconds": 0.001141305999681208,
+              "serialized_model_kb": 43.4482421875,
+              "specialist_call_rate": 0.20555555555555555,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherGrow",
+              "family": "Adaptive-width ELM candidate",
+              "accuracy": 0.95,
+              "balanced_accuracy": 0.95,
+              "macro_f1": 0.9499861072520144,
+              "fit_seconds": 0.012116182000227127,
+              "predict_seconds": 0.00022052500025893096,
+              "serialized_model_kb": 2.12890625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "selected width=32"
+            },
+            {
+              "model": "AetherCascade",
+              "family": "Three-stage adaptive cascade",
+              "accuracy": 0.9555555555555556,
+              "balanced_accuracy": 0.9555555555555556,
+              "macro_f1": 0.9555555555555556,
+              "fit_seconds": 0.09427055600008316,
+              "predict_seconds": 0.001317221999670437,
+              "serialized_model_kb": 48.3671875,
+              "specialist_call_rate": 0.6666666666666666,
+              "elm_call_rate": 0.5777777777777777,
+              "knn_call_rate": 0.08888888888888889,
+              "architecture_detail": "gate MLP<0.798; ELM<0.629"
+            }
+          ]
+        },
+        {
+          "seed": 183,
+          "models": [
+            {
+              "model": "MLP",
+              "family": "Neural",
+              "accuracy": 0.8555555555555555,
+              "balanced_accuracy": 0.8555555555555556,
+              "macro_f1": 0.85526966848095,
+              "fit_seconds": 0.03619376200003899,
+              "predict_seconds": 0.0002010810003412189,
+              "serialized_model_kb": 22.5029296875,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Extreme Learning Machine",
+              "family": "Neural / fixed random features",
+              "accuracy": 0.9333333333333333,
+              "balanced_accuracy": 0.9333333333333333,
+              "macro_f1": 0.9333251018644277,
+              "fit_seconds": 0.0026062920001095335,
+              "predict_seconds": 0.000302473000374448,
+              "serialized_model_kb": 8.244140625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "fixed width=192"
+            },
+            {
+              "model": "Hyperdimensional prototype",
+              "family": "Alternative representation",
+              "accuracy": 0.85,
+              "balanced_accuracy": 0.85,
+              "macro_f1": 0.8498841698841699,
+              "fit_seconds": 0.008833217999836052,
+              "predict_seconds": 0.0027869569998983934,
+              "serialized_model_kb": 40.7392578125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "dimensions=1024"
+            },
+            {
+              "model": "RBF network",
+              "family": "Neural / radial basis",
+              "accuracy": 0.85,
+              "balanced_accuracy": 0.85,
+              "macro_f1": 0.8497728045500912,
+              "fit_seconds": 0.09266742499994507,
+              "predict_seconds": 0.0005534839997380914,
+              "serialized_model_kb": 5.2333984375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "centers=40"
+            },
+            {
+              "model": "KNN",
+              "family": "Instance-based",
+              "accuracy": 0.9333333333333333,
+              "balanced_accuracy": 0.9333333333333333,
+              "macro_f1": 0.9333251018644277,
+              "fit_seconds": 0.0012210970003252442,
+              "predict_seconds": 0.001285626000026241,
+              "serialized_model_kb": 25.49609375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Nearest centroid",
+              "family": "Prototype-based",
+              "accuracy": 0.8777777777777778,
+              "balanced_accuracy": 0.8777777777777778,
+              "macro_f1": 0.8777626867514507,
+              "fit_seconds": 0.0009997540000767913,
+              "predict_seconds": 0.0007312050001928583,
+              "serialized_model_kb": 0.611328125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Random forest",
+              "family": "Non-neural baseline",
+              "accuracy": 0.9277777777777778,
+              "balanced_accuracy": 0.9277777777777778,
+              "macro_f1": 0.927757710475132,
+              "fit_seconds": 0.10462768900015362,
+              "predict_seconds": 0.005869092000011733,
+              "serialized_model_kb": 528.09765625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherNet gated expert",
+              "family": "Adaptive hybrid",
+              "accuracy": 0.9222222222222223,
+              "balanced_accuracy": 0.9222222222222223,
+              "macro_f1": 0.9221837944664031,
+              "fit_seconds": 0.1183529479999379,
+              "predict_seconds": 0.0010026910003944067,
+              "serialized_model_kb": 44.0791015625,
+              "specialist_call_rate": 0.027777777777777776,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherGrow",
+              "family": "Adaptive-width ELM candidate",
+              "accuracy": 0.9166666666666666,
+              "balanced_accuracy": 0.9166666666666667,
+              "macro_f1": 0.9166435120866907,
+              "fit_seconds": 0.013598752999769204,
+              "predict_seconds": 0.00015667400020902278,
+              "serialized_model_kb": 2.12890625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "selected width=32"
+            },
+            {
+              "model": "AetherCascade",
+              "family": "Three-stage adaptive cascade",
+              "accuracy": 0.9222222222222223,
+              "balanced_accuracy": 0.9222222222222223,
+              "macro_f1": 0.9221837944664031,
+              "fit_seconds": 0.14716594399988026,
+              "predict_seconds": 0.00044453999998950167,
+              "serialized_model_kb": 49.439453125,
+              "specialist_call_rate": 0.0,
+              "elm_call_rate": 0.0,
+              "knn_call_rate": 0.0,
+              "architecture_detail": "gate MLP<0.000; ELM<0.000"
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "MLP": {
+          "accuracy": {
+            "mean": 0.8962962962962963,
+            "std": 0.03020278968574094
+          },
+          "balanced_accuracy": {
+            "mean": 0.8962962962962964,
+            "std": 0.03020278968574089
+          },
+          "macro_f1": {
+            "mean": 0.8961736633004024,
+            "std": 0.030309311123265757
+          },
+          "fit_seconds": {
+            "mean": 0.07122726366666636,
+            "std": 0.03580423051852979
+          },
+          "predict_seconds": {
+            "mean": 0.00020072766680338341,
+            "std": 5.624681156111894e-06
+          },
+          "serialized_model_kb": {
+            "mean": 23.006510416666668,
+            "std": 0.4820503042869828
+          },
+          "family": "Neural"
+        },
+        "Extreme Learning Machine": {
+          "accuracy": {
+            "mean": 0.95,
+            "std": 0.01360827634879543
+          },
+          "balanced_accuracy": {
+            "mean": 0.95,
+            "std": 0.01360827634879543
+          },
+          "macro_f1": {
+            "mean": 0.9499953698463779,
+            "std": 0.013609956765385756
+          },
+          "fit_seconds": {
+            "mean": 0.0029947393331895,
+            "std": 0.000277803967524989
+          },
+          "predict_seconds": {
+            "mean": 0.000329937000060454,
+            "std": 4.17827678183631e-05
+          },
+          "serialized_model_kb": {
+            "mean": 8.244140625,
+            "std": 0.0
+          },
+          "family": "Neural / fixed random features"
+        },
+        "Hyperdimensional prototype": {
+          "accuracy": {
+            "mean": 0.8611111111111112,
+            "std": 0.009072184232530303
+          },
+          "balanced_accuracy": {
+            "mean": 0.8611111111111112,
+            "std": 0.009072184232530303
+          },
+          "macro_f1": {
+            "mean": 0.8610583227901929,
+            "std": 0.009117867123559597
+          },
+          "fit_seconds": {
+            "mean": 0.010608825999952387,
+            "std": 0.0028329378266235663
+          },
+          "predict_seconds": {
+            "mean": 0.0027430570000130197,
+            "std": 0.0005754530518797804
+          },
+          "serialized_model_kb": {
+            "mean": 40.7392578125,
+            "std": 0.0
+          },
+          "family": "Alternative representation"
+        },
+        "RBF network": {
+          "accuracy": {
+            "mean": 0.8722222222222222,
+            "std": 0.01635511271542193
+          },
+          "balanced_accuracy": {
+            "mean": 0.8722222222222222,
+            "std": 0.01635511271542193
+          },
+          "macro_f1": {
+            "mean": 0.8721217885428284,
+            "std": 0.01644651572472487
+          },
+          "fit_seconds": {
+            "mean": 0.09722620766660839,
+            "std": 0.004310279496052135
+          },
+          "predict_seconds": {
+            "mean": 0.0005744729998392965,
+            "std": 3.967015575446087e-05
+          },
+          "serialized_model_kb": {
+            "mean": 5.2333984375,
+            "std": 0.0
+          },
+          "family": "Neural / radial basis"
+        },
+        "KNN": {
+          "accuracy": {
+            "mean": 0.9462962962962963,
+            "std": 0.011415581486979593
+          },
+          "balanced_accuracy": {
+            "mean": 0.9462962962962963,
+            "std": 0.011415581486979546
+          },
+          "macro_f1": {
+            "mean": 0.9462876641306355,
+            "std": 0.011414393869312651
+          },
+          "fit_seconds": {
+            "mean": 0.0013787380001607137,
+            "std": 0.0006154673171097179
+          },
+          "predict_seconds": {
+            "mean": 0.0011960760001178035,
+            "std": 8.145177668576363e-05
+          },
+          "serialized_model_kb": {
+            "mean": 25.49609375,
+            "std": 0.0
+          },
+          "family": "Instance-based"
+        },
+        "Nearest centroid": {
+          "accuracy": {
+            "mean": 0.8648148148148148,
+            "std": 0.009442628728875531
+          },
+          "balanced_accuracy": {
+            "mean": 0.8648148148148148,
+            "std": 0.009442628728875531
+          },
+          "macro_f1": {
+            "mean": 0.8647969208171636,
+            "std": 0.00944078172137297
+          },
+          "fit_seconds": {
+            "mean": 0.0008480193334132006,
+            "std": 0.00011675988598009982
+          },
+          "predict_seconds": {
+            "mean": 0.0006596426668086982,
+            "std": 7.162685311946688e-05
+          },
+          "serialized_model_kb": {
+            "mean": 0.611328125,
+            "std": 0.0
+          },
+          "family": "Prototype-based"
+        },
+        "Random forest": {
+          "accuracy": {
+            "mean": 0.937037037037037,
+            "std": 0.009442628728875494
+          },
+          "balanced_accuracy": {
+            "mean": 0.937037037037037,
+            "std": 0.009442628728875494
+          },
+          "macro_f1": {
+            "mean": 0.9370298335169858,
+            "std": 0.009448484317182997
+          },
+          "fit_seconds": {
+            "mean": 0.10649721800003438,
+            "std": 0.0031851933797715283
+          },
+          "predict_seconds": {
+            "mean": 0.006389685666514803,
+            "std": 0.0004252413293054775
+          },
+          "serialized_model_kb": {
+            "mean": 559.7701822916666,
+            "std": 29.29308569605963
+          },
+          "family": "Non-neural baseline"
+        },
+        "AetherNet gated expert": {
+          "accuracy": {
+            "mean": 0.9425925925925926,
+            "std": 0.01593023197600485
+          },
+          "balanced_accuracy": {
+            "mean": 0.9425925925925926,
+            "std": 0.01593023197600485
+          },
+          "macro_f1": {
+            "mean": 0.9425770967177141,
+            "std": 0.01594588129413064
+          },
+          "fit_seconds": {
+            "mean": 0.10086782799983969,
+            "std": 0.014363405308540795
+          },
+          "predict_seconds": {
+            "mean": 0.0010591496667681592,
+            "std": 5.9435158259477134e-05
+          },
+          "serialized_model_kb": {
+            "mean": 43.750325520833336,
+            "std": 0.2582379564987481
+          },
+          "specialist_call_rate": {
+            "mean": 0.1425925925925926,
+            "std": 0.08131295703740796
+          },
+          "family": "Adaptive hybrid"
+        },
+        "AetherGrow": {
+          "accuracy": {
+            "mean": 0.9444444444444444,
+            "std": 0.020786985482077466
+          },
+          "balanced_accuracy": {
+            "mean": 0.9444444444444444,
+            "std": 0.020786985482077417
+          },
+          "macro_f1": {
+            "mean": 0.9444307234236397,
+            "std": 0.020794595112960074
+          },
+          "fit_seconds": {
+            "mean": 0.012794016000043484,
+            "std": 0.0006118727921773145
+          },
+          "predict_seconds": {
+            "mean": 0.00019524133358572726,
+            "std": 2.7707753459523625e-05
+          },
+          "serialized_model_kb": {
+            "mean": 2.5455729166666665,
+            "std": 0.5892556509887896
+          },
+          "family": "Adaptive-width ELM candidate"
+        },
+        "AetherCascade": {
+          "accuracy": {
+            "mean": 0.9462962962962963,
+            "std": 0.017173367584251295
+          },
+          "balanced_accuracy": {
+            "mean": 0.9462962962962963,
+            "std": 0.017173367584251295
+          },
+          "macro_f1": {
+            "mean": 0.9462830869405583,
+            "std": 0.017190979007621746
+          },
+          "fit_seconds": {
+            "mean": 0.12595045133336194,
+            "std": 0.02282700608623256
+          },
+          "predict_seconds": {
+            "mean": 0.0010755966665480325,
+            "std": 0.00045028586530348216
+          },
+          "serialized_model_kb": {
+            "mean": 48.962565104166664,
+            "std": 0.4456966297517033
+          },
+          "specialist_call_rate": {
+            "mean": 0.30925925925925923,
+            "std": 0.2742867043061367
+          },
+          "elm_call_rate": {
+            "mean": 0.2574074074074074,
+            "std": 0.24004172019639053
+          },
+          "knn_call_rate": {
+            "mean": 0.05185185185185185,
+            "std": 0.03777051491550211
+          },
+          "family": "Three-stage adaptive cascade"
+        }
+      }
+    },
+    "circles": {
+      "trials": [
+        {
+          "seed": 121,
+          "models": [
+            {
+              "model": "MLP",
+              "family": "Neural",
+              "accuracy": 0.8944444444444445,
+              "balanced_accuracy": 0.8944444444444444,
+              "macro_f1": 0.8944411864563722,
+              "fit_seconds": 0.07190781600002083,
+              "predict_seconds": 0.00019422400009716512,
+              "serialized_model_kb": 22.9423828125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Extreme Learning Machine",
+              "family": "Neural / fixed random features",
+              "accuracy": 0.9166666666666666,
+              "balanced_accuracy": 0.9166666666666667,
+              "macro_f1": 0.9166640945708201,
+              "fit_seconds": 0.002386537999882421,
+              "predict_seconds": 0.00026900500006377115,
+              "serialized_model_kb": 8.244140625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "fixed width=192"
+            },
+            {
+              "model": "Hyperdimensional prototype",
+              "family": "Alternative representation",
+              "accuracy": 0.5277777777777778,
+              "balanced_accuracy": 0.5277777777777778,
+              "macro_f1": 0.5270625328428796,
+              "fit_seconds": 0.01037702400026319,
+              "predict_seconds": 0.002851038999779121,
+              "serialized_model_kb": 40.7392578125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "dimensions=1024"
+            },
+            {
+              "model": "RBF network",
+              "family": "Neural / radial basis",
+              "accuracy": 0.9111111111111111,
+              "balanced_accuracy": 0.9111111111111112,
+              "macro_f1": 0.9109351806036615,
+              "fit_seconds": 0.08623159499984467,
+              "predict_seconds": 0.0003981500003646943,
+              "serialized_model_kb": 5.2333984375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "centers=40"
+            },
+            {
+              "model": "KNN",
+              "family": "Instance-based",
+              "accuracy": 0.9166666666666666,
+              "balanced_accuracy": 0.9166666666666667,
+              "macro_f1": 0.9165404469722729,
+              "fit_seconds": 0.0005904469999222783,
+              "predict_seconds": 0.0011073700002270925,
+              "serialized_model_kb": 25.49609375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Nearest centroid",
+              "family": "Prototype-based",
+              "accuracy": 0.5055555555555555,
+              "balanced_accuracy": 0.5055555555555555,
+              "macro_f1": 0.5037020973388271,
+              "fit_seconds": 0.0006427570001505956,
+              "predict_seconds": 0.000551812000139762,
+              "serialized_model_kb": 0.611328125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Random forest",
+              "family": "Non-neural baseline",
+              "accuracy": 0.8611111111111112,
+              "balanced_accuracy": 0.8611111111111112,
+              "macro_f1": 0.8611068242847002,
+              "fit_seconds": 0.11445069900037197,
+              "predict_seconds": 0.005777384999873902,
+              "serialized_model_kb": 689.8427734375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherNet gated expert",
+              "family": "Adaptive hybrid",
+              "accuracy": 0.9,
+              "balanced_accuracy": 0.9,
+              "macro_f1": 0.9,
+              "fit_seconds": 0.07493408800019097,
+              "predict_seconds": 0.0020670840003731428,
+              "serialized_model_kb": 43.2314453125,
+              "specialist_call_rate": 0.044444444444444446,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherGrow",
+              "family": "Adaptive-width ELM candidate",
+              "accuracy": 0.9166666666666666,
+              "balanced_accuracy": 0.9166666666666667,
+              "macro_f1": 0.9166640945708201,
+              "fit_seconds": 0.013477583000167215,
+              "predict_seconds": 0.00017153899989352794,
+              "serialized_model_kb": 2.12890625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "selected width=32"
+            },
+            {
+              "model": "AetherCascade",
+              "family": "Three-stage adaptive cascade",
+              "accuracy": 0.9055555555555556,
+              "balanced_accuracy": 0.9055555555555556,
+              "macro_f1": 0.9055293136982495,
+              "fit_seconds": 0.0930786540002373,
+              "predict_seconds": 0.0003901439999935974,
+              "serialized_model_kb": 48.591796875,
+              "specialist_call_rate": 0.0,
+              "elm_call_rate": 0.0,
+              "knn_call_rate": 0.0,
+              "architecture_detail": "gate MLP<0.000; ELM<0.000"
+            }
+          ]
+        },
+        {
+          "seed": 152,
+          "models": [
+            {
+              "model": "MLP",
+              "family": "Neural",
+              "accuracy": 0.9111111111111111,
+              "balanced_accuracy": 0.9111111111111111,
+              "macro_f1": 0.9111111111111111,
+              "fit_seconds": 0.06686045200012813,
+              "predict_seconds": 0.0009076759997697081,
+              "serialized_model_kb": 22.8857421875,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Extreme Learning Machine",
+              "family": "Neural / fixed random features",
+              "accuracy": 0.8888888888888888,
+              "balanced_accuracy": 0.8888888888888888,
+              "macro_f1": 0.8885448916408669,
+              "fit_seconds": 0.0029881899999963935,
+              "predict_seconds": 0.00032601199973214534,
+              "serialized_model_kb": 8.244140625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "fixed width=192"
+            },
+            {
+              "model": "Hyperdimensional prototype",
+              "family": "Alternative representation",
+              "accuracy": 0.49444444444444446,
+              "balanced_accuracy": 0.49444444444444446,
+              "macro_f1": 0.49405405405405406,
+              "fit_seconds": 0.012079721000191057,
+              "predict_seconds": 0.0030905730000085896,
+              "serialized_model_kb": 40.7392578125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "dimensions=1024"
+            },
+            {
+              "model": "RBF network",
+              "family": "Neural / radial basis",
+              "accuracy": 0.9,
+              "balanced_accuracy": 0.8999999999999999,
+              "macro_f1": 0.8993913799528008,
+              "fit_seconds": 0.09045982099996763,
+              "predict_seconds": 0.0006261720000111382,
+              "serialized_model_kb": 5.2333984375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "centers=40"
+            },
+            {
+              "model": "KNN",
+              "family": "Instance-based",
+              "accuracy": 0.9,
+              "balanced_accuracy": 0.9,
+              "macro_f1": 0.8995535714285714,
+              "fit_seconds": 0.0005728059995817603,
+              "predict_seconds": 0.001000474999727885,
+              "serialized_model_kb": 25.49609375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Nearest centroid",
+              "family": "Prototype-based",
+              "accuracy": 0.48333333333333334,
+              "balanced_accuracy": 0.48333333333333334,
+              "macro_f1": 0.4831897749374826,
+              "fit_seconds": 0.0006262949996198586,
+              "predict_seconds": 0.0008539169998584839,
+              "serialized_model_kb": 0.611328125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Random forest",
+              "family": "Non-neural baseline",
+              "accuracy": 0.9,
+              "balanced_accuracy": 0.8999999999999999,
+              "macro_f1": 0.8999876527966415,
+              "fit_seconds": 0.11192206699979579,
+              "predict_seconds": 0.00633205900021494,
+              "serialized_model_kb": 680.4677734375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherNet gated expert",
+              "family": "Adaptive hybrid",
+              "accuracy": 0.9,
+              "balanced_accuracy": 0.8999999999999999,
+              "macro_f1": 0.8998020781791193,
+              "fit_seconds": 0.12227008499985459,
+              "predict_seconds": 0.0011416740003369341,
+              "serialized_model_kb": 44.0517578125,
+              "specialist_call_rate": 0.14444444444444443,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherGrow",
+              "family": "Adaptive-width ELM candidate",
+              "accuracy": 0.8888888888888888,
+              "balanced_accuracy": 0.8888888888888888,
+              "macro_f1": 0.8886689757545769,
+              "fit_seconds": 0.012463073999697372,
+              "predict_seconds": 0.000169296999956714,
+              "serialized_model_kb": 2.12890625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "selected width=32"
+            },
+            {
+              "model": "AetherCascade",
+              "family": "Three-stage adaptive cascade",
+              "accuracy": 0.9,
+              "balanced_accuracy": 0.8999999999999999,
+              "macro_f1": 0.8998020781791193,
+              "fit_seconds": 0.15935983899998973,
+              "predict_seconds": 0.0015117490002012346,
+              "serialized_model_kb": 49.4091796875,
+              "specialist_call_rate": 0.22777777777777777,
+              "elm_call_rate": 0.11666666666666667,
+              "knn_call_rate": 0.1111111111111111,
+              "architecture_detail": "gate MLP<0.714; ELM<0.574"
+            }
+          ]
+        },
+        {
+          "seed": 183,
+          "models": [
+            {
+              "model": "MLP",
+              "family": "Neural",
+              "accuracy": 0.9055555555555556,
+              "balanced_accuracy": 0.9055555555555556,
+              "macro_f1": 0.9052015242107871,
+              "fit_seconds": 0.05030016599994269,
+              "predict_seconds": 0.0003033230000255571,
+              "serialized_model_kb": 22.7236328125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Extreme Learning Machine",
+              "family": "Neural / fixed random features",
+              "accuracy": 0.9277777777777778,
+              "balanced_accuracy": 0.9277777777777778,
+              "macro_f1": 0.9277755486280441,
+              "fit_seconds": 0.002662667000095098,
+              "predict_seconds": 0.0003044029999728082,
+              "serialized_model_kb": 8.244140625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "fixed width=192"
+            },
+            {
+              "model": "Hyperdimensional prototype",
+              "family": "Alternative representation",
+              "accuracy": 0.5222222222222223,
+              "balanced_accuracy": 0.5222222222222221,
+              "macro_f1": 0.5221632300283986,
+              "fit_seconds": 0.01146336900001188,
+              "predict_seconds": 0.002832752000358596,
+              "serialized_model_kb": 40.7392578125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "dimensions=1024"
+            },
+            {
+              "model": "RBF network",
+              "family": "Neural / radial basis",
+              "accuracy": 0.9166666666666666,
+              "balanced_accuracy": 0.9166666666666667,
+              "macro_f1": 0.9166640945708201,
+              "fit_seconds": 0.08641810499966596,
+              "predict_seconds": 0.0010953269998026371,
+              "serialized_model_kb": 5.2333984375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "centers=40"
+            },
+            {
+              "model": "KNN",
+              "family": "Instance-based",
+              "accuracy": 0.9277777777777778,
+              "balanced_accuracy": 0.9277777777777778,
+              "macro_f1": 0.9277755486280441,
+              "fit_seconds": 0.0007332939999287191,
+              "predict_seconds": 0.001157730000159063,
+              "serialized_model_kb": 25.49609375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Nearest centroid",
+              "family": "Prototype-based",
+              "accuracy": 0.5555555555555556,
+              "balanced_accuracy": 0.5555555555555556,
+              "macro_f1": 0.5550611790878754,
+              "fit_seconds": 0.0006075159999454627,
+              "predict_seconds": 0.0009392880001541926,
+              "serialized_model_kb": 0.611328125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Random forest",
+              "family": "Non-neural baseline",
+              "accuracy": 0.9222222222222223,
+              "balanced_accuracy": 0.9222222222222223,
+              "macro_f1": 0.9222126188418324,
+              "fit_seconds": 0.11407513099993594,
+              "predict_seconds": 0.006251670999972703,
+              "serialized_model_kb": 676.7177734375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherNet gated expert",
+              "family": "Adaptive hybrid",
+              "accuracy": 0.9333333333333333,
+              "balanced_accuracy": 0.9333333333333333,
+              "macro_f1": 0.933300395256917,
+              "fit_seconds": 0.07974999799989746,
+              "predict_seconds": 0.0003681849998429243,
+              "serialized_model_kb": 43.234375,
+              "specialist_call_rate": 0.0,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherGrow",
+              "family": "Adaptive-width ELM candidate",
+              "accuracy": 0.9222222222222223,
+              "balanced_accuracy": 0.9222222222222223,
+              "macro_f1": 0.9222126188418324,
+              "fit_seconds": 0.01517051500013622,
+              "predict_seconds": 0.00017031300012604333,
+              "serialized_model_kb": 2.12890625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "selected width=32"
+            },
+            {
+              "model": "AetherCascade",
+              "family": "Three-stage adaptive cascade",
+              "accuracy": 0.9333333333333333,
+              "balanced_accuracy": 0.9333333333333333,
+              "macro_f1": 0.933300395256917,
+              "fit_seconds": 0.10069277299999158,
+              "predict_seconds": 0.0004399300000841322,
+              "serialized_model_kb": 48.591796875,
+              "specialist_call_rate": 0.0,
+              "elm_call_rate": 0.0,
+              "knn_call_rate": 0.0,
+              "architecture_detail": "gate MLP<0.000; ELM<0.000"
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "MLP": {
+          "accuracy": {
+            "mean": 0.9037037037037037,
+            "std": 0.00692899516069246
+          },
+          "balanced_accuracy": {
+            "mean": 0.9037037037037037,
+            "std": 0.006928995160692509
+          },
+          "macro_f1": {
+            "mean": 0.9035846072594235,
+            "std": 0.0069008411235816575
+          },
+          "fit_seconds": {
+            "mean": 0.06302281133336389,
+            "std": 0.009229237926173221
+          },
+          "predict_seconds": {
+            "mean": 0.0004684076666308101,
+            "std": 0.000313786710277659
+          },
+          "serialized_model_kb": {
+            "mean": 22.8505859375,
+            "std": 0.09269973772183995
+          },
+          "family": "Neural"
+        },
+        "Extreme Learning Machine": {
+          "accuracy": {
+            "mean": 0.9111111111111111,
+            "std": 0.01635511271542197
+          },
+          "balanced_accuracy": {
+            "mean": 0.9111111111111111,
+            "std": 0.01635511271542198
+          },
+          "macro_f1": {
+            "mean": 0.910994844946577,
+            "std": 0.016509924396917022
+          },
+          "fit_seconds": {
+            "mean": 0.002679131666657971,
+            "std": 0.00024589916123492005
+          },
+          "predict_seconds": {
+            "mean": 0.0002998066665895749,
+            "std": 2.3498854060356112e-05
+          },
+          "serialized_model_kb": {
+            "mean": 8.244140625,
+            "std": 0.0
+          },
+          "family": "Neural / fixed random features"
+        },
+        "Hyperdimensional prototype": {
+          "accuracy": {
+            "mean": 0.5148148148148148,
+            "std": 0.014581496062984835
+          },
+          "balanced_accuracy": {
+            "mean": 0.5148148148148148,
+            "std": 0.014581496062984816
+          },
+          "macro_f1": {
+            "mean": 0.5144266056417774,
+            "std": 0.014543760074635282
+          },
+          "fit_seconds": {
+            "mean": 0.011306704666822043,
+            "std": 0.0007038949037847441
+          },
+          "predict_seconds": {
+            "mean": 0.002924788000048769,
+            "std": 0.00011746518135376657
+          },
+          "serialized_model_kb": {
+            "mean": 40.7392578125,
+            "std": 0.0
+          },
+          "family": "Alternative representation"
+        },
+        "RBF network": {
+          "accuracy": {
+            "mean": 0.9092592592592592,
+            "std": 0.00692899516069246
+          },
+          "balanced_accuracy": {
+            "mean": 0.9092592592592593,
+            "std": 0.0069289951606925585
+          },
+          "macro_f1": {
+            "mean": 0.9089968850424275,
+            "std": 0.00718351862858812
+          },
+          "fit_seconds": {
+            "mean": 0.08770317366649276,
+            "std": 0.0019507306128514945
+          },
+          "predict_seconds": {
+            "mean": 0.0007065496667261565,
+            "std": 0.0002902405543869157
+          },
+          "serialized_model_kb": {
+            "mean": 5.2333984375,
+            "std": 0.0
+          },
+          "family": "Neural / radial basis"
+        },
+        "KNN": {
+          "accuracy": {
+            "mean": 0.9148148148148149,
+            "std": 0.011415581486979588
+          },
+          "balanced_accuracy": {
+            "mean": 0.9148148148148149,
+            "std": 0.011415581486979593
+          },
+          "macro_f1": {
+            "mean": 0.9146231890096295,
+            "std": 0.011601060521445996
+          },
+          "fit_seconds": {
+            "mean": 0.0006321823331442525,
+            "std": 7.18585559424591e-05
+          },
+          "predict_seconds": {
+            "mean": 0.0010885250000380136,
+            "std": 6.556744270467995e-05
+          },
+          "serialized_model_kb": {
+            "mean": 25.49609375,
+            "std": 0.0
+          },
+          "family": "Instance-based"
+        },
+        "Nearest centroid": {
+          "accuracy": {
+            "mean": 0.5148148148148148,
+            "std": 0.03020278968574092
+          },
+          "balanced_accuracy": {
+            "mean": 0.5148148148148148,
+            "std": 0.03020278968574092
+          },
+          "macro_f1": {
+            "mean": 0.5139843504547283,
+            "std": 0.030228774707683984
+          },
+          "fit_seconds": {
+            "mean": 0.0006255226665719723,
+            "std": 1.4397439532018344e-05
+          },
+          "predict_seconds": {
+            "mean": 0.0007816723333841461,
+            "std": 0.0001662305257211342
+          },
+          "serialized_model_kb": {
+            "mean": 0.611328125,
+            "std": 0.0
+          },
+          "family": "Prototype-based"
+        },
+        "Random forest": {
+          "accuracy": {
+            "mean": 0.8944444444444445,
+            "std": 0.02525589203145529
+          },
+          "balanced_accuracy": {
+            "mean": 0.8944444444444445,
+            "std": 0.02525589203145528
+          },
+          "macro_f1": {
+            "mean": 0.894435698641058,
+            "std": 0.025253351966605494
+          },
+          "fit_seconds": {
+            "mean": 0.1134826323333679,
+            "std": 0.0011140873547432302
+          },
+          "predict_seconds": {
+            "mean": 0.0061203716666871815,
+            "std": 0.0002447385650777841
+          },
+          "serialized_model_kb": {
+            "mean": 682.3427734375,
+            "std": 5.519850541454904
+          },
+          "family": "Non-neural baseline"
+        },
+        "AetherNet gated expert": {
+          "accuracy": {
+            "mean": 0.9111111111111111,
+            "std": 0.01571348402636772
+          },
+          "balanced_accuracy": {
+            "mean": 0.9111111111111111,
+            "std": 0.015713484026367745
+          },
+          "macro_f1": {
+            "mean": 0.9110341578120121,
+            "std": 0.015744814823224793
+          },
+          "fit_seconds": {
+            "mean": 0.09231805699998101,
+            "std": 0.021270342941291546
+          },
+          "predict_seconds": {
+            "mean": 0.0011923143335176671,
+            "std": 0.0006944963575662273
+          },
+          "serialized_model_kb": {
+            "mean": 43.505859375,
+            "std": 0.3860103399443405
+          },
+          "specialist_call_rate": {
+            "mean": 0.06296296296296296,
+            "std": 0.06040557937148181
+          },
+          "family": "Adaptive hybrid"
+        },
+        "AetherGrow": {
+          "accuracy": {
+            "mean": 0.9092592592592592,
+            "std": 0.014581496062984868
+          },
+          "balanced_accuracy": {
+            "mean": 0.9092592592592593,
+            "std": 0.014581496062984887
+          },
+          "macro_f1": {
+            "mean": 0.9091818963890764,
+            "std": 0.01468063270921842
+          },
+          "fit_seconds": {
+            "mean": 0.01370372400000027,
+            "std": 0.0011168151164713724
+          },
+          "predict_seconds": {
+            "mean": 0.00017038299999209508,
+            "std": 9.166300290025747e-07
+          },
+          "serialized_model_kb": {
+            "mean": 2.12890625,
+            "std": 0.0
+          },
+          "family": "Adaptive-width ELM candidate"
+        },
+        "AetherCascade": {
+          "accuracy": {
+            "mean": 0.912962962962963,
+            "std": 0.014581496062984835
+          },
+          "balanced_accuracy": {
+            "mean": 0.912962962962963,
+            "std": 0.014581496062984868
+          },
+          "macro_f1": {
+            "mean": 0.9128772623780953,
+            "std": 0.014629389919209519
+          },
+          "fit_seconds": {
+            "mean": 0.11771042200007287,
+            "std": 0.029614176271512575
+          },
+          "predict_seconds": {
+            "mean": 0.0007806076667596548,
+            "std": 0.0005173943683183408
+          },
+          "serialized_model_kb": {
+            "mean": 48.8642578125,
+            "std": 0.3853179530293882
+          },
+          "specialist_call_rate": {
+            "mean": 0.07592592592592592,
+            "std": 0.10737547418017944
+          },
+          "elm_call_rate": {
+            "mean": 0.03888888888888889,
+            "std": 0.05499719409228703
+          },
+          "knn_call_rate": {
+            "mean": 0.037037037037037035,
+            "std": 0.05237828008789241
+          },
+          "family": "Three-stage adaptive cascade"
+        }
+      }
+    },
+    "mixed_tabular": {
+      "trials": [
+        {
+          "seed": 121,
+          "models": [
+            {
+              "model": "MLP",
+              "family": "Neural",
+              "accuracy": 0.8055555555555556,
+              "balanced_accuracy": 0.8048524509198667,
+              "macro_f1": 0.8045360057087897,
+              "fit_seconds": 0.06708379300016531,
+              "predict_seconds": 0.0005854860000908957,
+              "serialized_model_kb": 30.3603515625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Extreme Learning Machine",
+              "family": "Neural / fixed random features",
+              "accuracy": 0.7333333333333333,
+              "balanced_accuracy": 0.733053463390542,
+              "macro_f1": 0.7330367074527253,
+              "fit_seconds": 0.00344564699980765,
+              "predict_seconds": 0.00047929399988788646,
+              "serialized_model_kb": 23.478515625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "fixed width=192"
+            },
+            {
+              "model": "Hyperdimensional prototype",
+              "family": "Alternative representation",
+              "accuracy": 0.7722222222222223,
+              "balanced_accuracy": 0.7725027781207556,
+              "macro_f1": 0.7721589330369547,
+              "fit_seconds": 0.011257318999923882,
+              "predict_seconds": 0.002780426000299485,
+              "serialized_model_kb": 120.982421875,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "dimensions=1024"
+            },
+            {
+              "model": "RBF network",
+              "family": "Neural / radial basis",
+              "accuracy": 0.8,
+              "balanced_accuracy": 0.8000987776268675,
+              "macro_f1": 0.8,
+              "fit_seconds": 0.09615163399985249,
+              "predict_seconds": 0.0005889899998692272,
+              "serialized_model_kb": 8.5927734375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "centers=40"
+            },
+            {
+              "model": "KNN",
+              "family": "Instance-based",
+              "accuracy": 0.8111111111111111,
+              "balanced_accuracy": 0.8108408445487097,
+              "macro_f1": 0.8109010011123471,
+              "fit_seconds": 0.0009766349999154045,
+              "predict_seconds": 0.002886497999952553,
+              "serialized_model_kb": 86.599609375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Nearest centroid",
+              "family": "Prototype-based",
+              "accuracy": 0.7722222222222223,
+              "balanced_accuracy": 0.7721323620200025,
+              "macro_f1": 0.7721589330369547,
+              "fit_seconds": 0.0006730449999849952,
+              "predict_seconds": 0.000559958999929222,
+              "serialized_model_kb": 1.001953125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Random forest",
+              "family": "Non-neural baseline",
+              "accuracy": 0.8444444444444444,
+              "balanced_accuracy": 0.843931349549327,
+              "macro_f1": 0.8439628482972137,
+              "fit_seconds": 0.18101009400015755,
+              "predict_seconds": 0.006275937999816961,
+              "serialized_model_kb": 1190.3642578125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherNet gated expert",
+              "family": "Adaptive hybrid",
+              "accuracy": 0.8333333333333334,
+              "balanced_accuracy": 0.8329423385603161,
+              "macro_f1": 0.8330034636318655,
+              "fit_seconds": 0.09738681299995733,
+              "predict_seconds": 0.001135279000209266,
+              "serialized_model_kb": 98.279296875,
+              "specialist_call_rate": 0.08333333333333333,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherGrow",
+              "family": "Adaptive-width ELM candidate",
+              "accuracy": 0.7833333333333333,
+              "balanced_accuracy": 0.7829979009754291,
+              "macro_f1": 0.7830051621279095,
+              "fit_seconds": 0.015832745999887265,
+              "predict_seconds": 0.0005858259996784909,
+              "serialized_model_kb": 16.11328125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "selected width=128"
+            },
+            {
+              "model": "AetherCascade",
+              "family": "Three-stage adaptive cascade",
+              "accuracy": 0.7944444444444444,
+              "balanced_accuracy": 0.79398691196444,
+              "macro_f1": 0.7939292676134782,
+              "fit_seconds": 0.10729525399983686,
+              "predict_seconds": 0.0007306420002350933,
+              "serialized_model_kb": 113.3779296875,
+              "specialist_call_rate": 0.4,
+              "elm_call_rate": 0.4,
+              "knn_call_rate": 0.0,
+              "architecture_detail": "gate MLP<0.619; ELM<0.000"
+            }
+          ]
+        },
+        {
+          "seed": 152,
+          "models": [
+            {
+              "model": "MLP",
+              "family": "Neural",
+              "accuracy": 0.8666666666666667,
+              "balanced_accuracy": 0.8666666666666667,
+              "macro_f1": 0.8666502037288555,
+              "fit_seconds": 0.08934659399983502,
+              "predict_seconds": 0.00019320399997013737,
+              "serialized_model_kb": 30.4951171875,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Extreme Learning Machine",
+              "family": "Neural / fixed random features",
+              "accuracy": 0.8666666666666667,
+              "balanced_accuracy": 0.8666666666666667,
+              "macro_f1": 0.8666502037288555,
+              "fit_seconds": 0.003304945999843767,
+              "predict_seconds": 0.0004019110001536319,
+              "serialized_model_kb": 23.478515625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "fixed width=192"
+            },
+            {
+              "model": "Hyperdimensional prototype",
+              "family": "Alternative representation",
+              "accuracy": 0.6722222222222223,
+              "balanced_accuracy": 0.6722222222222223,
+              "macro_f1": 0.6692722120145744,
+              "fit_seconds": 0.012434692999704566,
+              "predict_seconds": 0.0023821539998607477,
+              "serialized_model_kb": 120.982421875,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "dimensions=1024"
+            },
+            {
+              "model": "RBF network",
+              "family": "Neural / radial basis",
+              "accuracy": 0.8666666666666667,
+              "balanced_accuracy": 0.8666666666666667,
+              "macro_f1": 0.8662538699690403,
+              "fit_seconds": 0.10703552599989052,
+              "predict_seconds": 0.0005514199997378455,
+              "serialized_model_kb": 8.5927734375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "centers=40"
+            },
+            {
+              "model": "KNN",
+              "family": "Instance-based",
+              "accuracy": 0.85,
+              "balanced_accuracy": 0.8500000000000001,
+              "macro_f1": 0.8499583217560434,
+              "fit_seconds": 0.0012795990000995516,
+              "predict_seconds": 0.00301616600017951,
+              "serialized_model_kb": 86.599609375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Nearest centroid",
+              "family": "Prototype-based",
+              "accuracy": 0.6222222222222222,
+              "balanced_accuracy": 0.6222222222222222,
+              "macro_f1": 0.6210526315789473,
+              "fit_seconds": 0.0007511280000471743,
+              "predict_seconds": 0.0009877480001705408,
+              "serialized_model_kb": 1.001953125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Random forest",
+              "family": "Non-neural baseline",
+              "accuracy": 0.8722222222222222,
+              "balanced_accuracy": 0.8722222222222222,
+              "macro_f1": 0.8722182783419241,
+              "fit_seconds": 0.1715703959998791,
+              "predict_seconds": 0.007117595999716286,
+              "serialized_model_kb": 937.994140625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherNet gated expert",
+              "family": "Adaptive hybrid",
+              "accuracy": 0.8555555555555555,
+              "balanced_accuracy": 0.8555555555555556,
+              "macro_f1": 0.8554841897233202,
+              "fit_seconds": 0.07209262499964098,
+              "predict_seconds": 0.0011781160001191893,
+              "serialized_model_kb": 97.982421875,
+              "specialist_call_rate": 0.1111111111111111,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherGrow",
+              "family": "Adaptive-width ELM candidate",
+              "accuracy": 0.85,
+              "balanced_accuracy": 0.85,
+              "macro_f1": 0.8498841698841699,
+              "fit_seconds": 0.017686951000086992,
+              "predict_seconds": 0.000282147000234545,
+              "serialized_model_kb": 12.36328125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "selected width=96"
+            },
+            {
+              "model": "AetherCascade",
+              "family": "Three-stage adaptive cascade",
+              "accuracy": 0.8611111111111112,
+              "balanced_accuracy": 0.8611111111111112,
+              "macro_f1": 0.8610725201444845,
+              "fit_seconds": 0.1385853589999897,
+              "predict_seconds": 0.0021845569999641157,
+              "serialized_model_kb": 113.572265625,
+              "specialist_call_rate": 0.17777777777777778,
+              "elm_call_rate": 0.1388888888888889,
+              "knn_call_rate": 0.03888888888888889,
+              "architecture_detail": "gate MLP<0.602; ELM<0.540"
+            }
+          ]
+        },
+        {
+          "seed": 183,
+          "models": [
+            {
+              "model": "MLP",
+              "family": "Neural",
+              "accuracy": 0.8777777777777778,
+              "balanced_accuracy": 0.8777777777777778,
+              "macro_f1": 0.8777173913043479,
+              "fit_seconds": 0.08967256899995846,
+              "predict_seconds": 0.0003116180000688473,
+              "serialized_model_kb": 30.63671875,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Extreme Learning Machine",
+              "family": "Neural / fixed random features",
+              "accuracy": 0.8666666666666667,
+              "balanced_accuracy": 0.8666666666666667,
+              "macro_f1": 0.866600790513834,
+              "fit_seconds": 0.0030745200001547346,
+              "predict_seconds": 0.0006649960000686406,
+              "serialized_model_kb": 23.478515625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "fixed width=192"
+            },
+            {
+              "model": "Hyperdimensional prototype",
+              "family": "Alternative representation",
+              "accuracy": 0.7666666666666667,
+              "balanced_accuracy": 0.7666666666666666,
+              "macro_f1": 0.765625,
+              "fit_seconds": 0.01023173300018243,
+              "predict_seconds": 0.0032042970001384674,
+              "serialized_model_kb": 120.982421875,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "dimensions=1024"
+            },
+            {
+              "model": "RBF network",
+              "family": "Neural / radial basis",
+              "accuracy": 0.8444444444444444,
+              "balanced_accuracy": 0.8444444444444444,
+              "macro_f1": 0.8444252376836646,
+              "fit_seconds": 0.09444188299994494,
+              "predict_seconds": 0.004558511000141152,
+              "serialized_model_kb": 8.5927734375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "centers=40"
+            },
+            {
+              "model": "KNN",
+              "family": "Instance-based",
+              "accuracy": 0.8222222222222222,
+              "balanced_accuracy": 0.8222222222222222,
+              "macro_f1": 0.8208063713290195,
+              "fit_seconds": 0.0010188210003434506,
+              "predict_seconds": 0.0029200940002738207,
+              "serialized_model_kb": 86.599609375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Nearest centroid",
+              "family": "Prototype-based",
+              "accuracy": 0.7555555555555555,
+              "balanced_accuracy": 0.7555555555555555,
+              "macro_f1": 0.7544642857142858,
+              "fit_seconds": 0.0009170119997179427,
+              "predict_seconds": 0.0006538510001519171,
+              "serialized_model_kb": 1.001953125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Random forest",
+              "family": "Non-neural baseline",
+              "accuracy": 0.8333333333333334,
+              "balanced_accuracy": 0.8333333333333333,
+              "macro_f1": 0.8333127546610692,
+              "fit_seconds": 0.17621028699977614,
+              "predict_seconds": 0.005848705000062182,
+              "serialized_model_kb": 918.775390625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherNet gated expert",
+              "family": "Adaptive hybrid",
+              "accuracy": 0.8111111111111111,
+              "balanced_accuracy": 0.8111111111111111,
+              "macro_f1": 0.8107372587827808,
+              "fit_seconds": 0.06660912999996071,
+              "predict_seconds": 0.0013942519999545766,
+              "serialized_model_kb": 97.845703125,
+              "specialist_call_rate": 0.21666666666666667,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherGrow",
+              "family": "Adaptive-width ELM candidate",
+              "accuracy": 0.85,
+              "balanced_accuracy": 0.85,
+              "macro_f1": 0.8499953702274762,
+              "fit_seconds": 0.017331859000023542,
+              "predict_seconds": 0.0002384519998486212,
+              "serialized_model_kb": 4.86328125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "selected width=32"
+            },
+            {
+              "model": "AetherCascade",
+              "family": "Three-stage adaptive cascade",
+              "accuracy": 0.8166666666666667,
+              "balanced_accuracy": 0.8166666666666667,
+              "macro_f1": 0.8163889833390003,
+              "fit_seconds": 0.13661181299994496,
+              "predict_seconds": 0.0017756370002643962,
+              "serialized_model_kb": 113.435546875,
+              "specialist_call_rate": 0.4166666666666667,
+              "elm_call_rate": 0.21666666666666667,
+              "knn_call_rate": 0.2,
+              "architecture_detail": "gate MLP<0.633; ELM<0.682"
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "MLP": {
+          "accuracy": {
+            "mean": 0.85,
+            "std": 0.031752644813856
+          },
+          "balanced_accuracy": {
+            "mean": 0.8497656317881037,
+            "std": 0.03208072691724315
+          },
+          "macro_f1": {
+            "mean": 0.8496345335806643,
+            "std": 0.03220795525296481
+          },
+          "fit_seconds": {
+            "mean": 0.08203431866665294,
+            "std": 0.010572455665656398
+          },
+          "predict_seconds": {
+            "mean": 0.00036343600004329346,
+            "std": 0.0001642865803927179
+          },
+          "serialized_model_kb": {
+            "mean": 30.497395833333332,
+            "std": 0.1128379361497139
+          },
+          "family": "Neural"
+        },
+        "Extreme Learning Machine": {
+          "accuracy": {
+            "mean": 0.8222222222222222,
+            "std": 0.06285393610547092
+          },
+          "balanced_accuracy": {
+            "mean": 0.8221289322412918,
+            "std": 0.06298586806173627
+          },
+          "macro_f1": {
+            "mean": 0.8220959005651383,
+            "std": 0.06297436260782108
+          },
+          "fit_seconds": {
+            "mean": 0.0032750376666020506,
+            "std": 0.00015298081310154973
+          },
+          "predict_seconds": {
+            "mean": 0.000515400333370053,
+            "std": 0.00011039679881595025
+          },
+          "serialized_model_kb": {
+            "mean": 23.478515625,
+            "std": 0.0
+          },
+          "family": "Neural / fixed random features"
+        },
+        "Hyperdimensional prototype": {
+          "accuracy": {
+            "mean": 0.737037037037037,
+            "std": 0.04588708034579209
+          },
+          "balanced_accuracy": {
+            "mean": 0.7371305556698815,
+            "std": 0.045958922691468194
+          },
+          "macro_f1": {
+            "mean": 0.735685381683843,
+            "std": 0.047036899694971025
+          },
+          "fit_seconds": {
+            "mean": 0.01130791499993696,
+            "std": 0.0009000659813912293
+          },
+          "predict_seconds": {
+            "mean": 0.0027889590000995668,
+            "std": 0.00033569270401226955
+          },
+          "serialized_model_kb": {
+            "mean": 120.982421875,
+            "std": 0.0
+          },
+          "family": "Alternative representation"
+        },
+        "RBF network": {
+          "accuracy": {
+            "mean": 0.837037037037037,
+            "std": 0.027715980642769925
+          },
+          "balanced_accuracy": {
+            "mean": 0.8370699629126596,
+            "std": 0.027671985788286925
+          },
+          "macro_f1": {
+            "mean": 0.836893035884235,
+            "std": 0.02756742485167499
+          },
+          "fit_seconds": {
+            "mean": 0.09920968099989598,
+            "std": 0.00557755619086447
+          },
+          "predict_seconds": {
+            "mean": 0.0018996403332494083,
+            "std": 0.001880168041013086
+          },
+          "serialized_model_kb": {
+            "mean": 8.5927734375,
+            "std": 0.0
+          },
+          "family": "Neural / radial basis"
+        },
+        "KNN": {
+          "accuracy": {
+            "mean": 0.8277777777777777,
+            "std": 0.01635511271542193
+          },
+          "balanced_accuracy": {
+            "mean": 0.827687688923644,
+            "std": 0.016447154943694538
+          },
+          "macro_f1": {
+            "mean": 0.8272218980658033,
+            "std": 0.016577852925895177
+          },
+          "fit_seconds": {
+            "mean": 0.001091685000119469,
+            "std": 0.000133986736158011
+          },
+          "predict_seconds": {
+            "mean": 0.002940919333468628,
+            "std": 5.4946752695802807e-05
+          },
+          "serialized_model_kb": {
+            "mean": 86.599609375,
+            "std": 0.0
+          },
+          "family": "Instance-based"
+        },
+        "Nearest centroid": {
+          "accuracy": {
+            "mean": 0.7166666666666667,
+            "std": 0.06712803318663652
+          },
+          "balanced_accuracy": {
+            "mean": 0.7166367132659267,
+            "std": 0.06710325236738406
+          },
+          "macro_f1": {
+            "mean": 0.7158919501100626,
+            "std": 0.06744947437676675
+          },
+          "fit_seconds": {
+            "mean": 0.000780394999916704,
+            "std": 0.00010172640496513606
+          },
+          "predict_seconds": {
+            "mean": 0.0007338526667505599,
+            "std": 0.000183577517097977
+          },
+          "serialized_model_kb": {
+            "mean": 1.001953125,
+            "std": 0.0
+          },
+          "family": "Prototype-based"
+        },
+        "Random forest": {
+          "accuracy": {
+            "mean": 0.85,
+            "std": 0.01635511271542193
+          },
+          "balanced_accuracy": {
+            "mean": 0.8498289683682941,
+            "std": 0.016414888578228093
+          },
+          "macro_f1": {
+            "mean": 0.8498312937667357,
+            "std": 0.016416230431942545
+          },
+          "fit_seconds": {
+            "mean": 0.17626359233327094,
+            "std": 0.0038539248979059812
+          },
+          "predict_seconds": {
+            "mean": 0.006414079666531809,
+            "std": 0.0005271517379988835
+          },
+          "serialized_model_kb": {
+            "mean": 1015.7112630208334,
+            "std": 123.74730038850433
+          },
+          "family": "Non-neural baseline"
+        },
+        "AetherNet gated expert": {
+          "accuracy": {
+            "mean": 0.8333333333333334,
+            "std": 0.01814436846506056
+          },
+          "balanced_accuracy": {
+            "mean": 0.8332030017423276,
+            "std": 0.018145304616983257
+          },
+          "macro_f1": {
+            "mean": 0.8330749707126555,
+            "std": 0.018267928036065514
+          },
+          "fit_seconds": {
+            "mean": 0.07869618933318634,
+            "std": 0.013404520111826072
+          },
+          "predict_seconds": {
+            "mean": 0.0012358823334276774,
+            "std": 0.0001133415651830097
+          },
+          "serialized_model_kb": {
+            "mean": 98.03580729166667,
+            "std": 0.18099426702572807
+          },
+          "specialist_call_rate": {
+            "mean": 0.13703703703703704,
+            "std": 0.057437268219521574
+          },
+          "family": "Adaptive hybrid"
+        },
+        "AetherGrow": {
+          "accuracy": {
+            "mean": 0.8277777777777777,
+            "std": 0.03142696805273544
+          },
+          "balanced_accuracy": {
+            "mean": 0.8276659669918097,
+            "std": 0.03158509238267109
+          },
+          "macro_f1": {
+            "mean": 0.8276282340798519,
+            "std": 0.031553309432348055
+          },
+          "fit_seconds": {
+            "mean": 0.016950518666665932,
+            "std": 0.0008035688657795656
+          },
+          "predict_seconds": {
+            "mean": 0.0003688083332538857,
+            "std": 0.0001544880015189257
+          },
+          "serialized_model_kb": {
+            "mean": 11.11328125,
+            "std": 4.677071733467427
+          },
+          "family": "Adaptive-width ELM candidate"
+        },
+        "AetherCascade": {
+          "accuracy": {
+            "mean": 0.8240740740740741,
+            "std": 0.027715980642769977
+          },
+          "balanced_accuracy": {
+            "mean": 0.823921563247406,
+            "std": 0.02787937913068137
+          },
+          "macro_f1": {
+            "mean": 0.8237969236989877,
+            "std": 0.027907134994399684
+          },
+          "fit_seconds": {
+            "mean": 0.12749747533325717,
+            "std": 0.014307830747693148
+          },
+          "predict_seconds": {
+            "mean": 0.001563612000154535,
+            "std": 0.000612199943979607
+          },
+          "serialized_model_kb": {
+            "mean": 113.4619140625,
+            "std": 0.08149861178161705
+          },
+          "specialist_call_rate": {
+            "mean": 0.3314814814814815,
+            "std": 0.10889770687399376
+          },
+          "elm_call_rate": {
+            "mean": 0.2518518518518519,
+            "std": 0.1094630867120863
+          },
+          "knn_call_rate": {
+            "mean": 0.07962962962962963,
+            "std": 0.08658273872267377
+          },
+          "family": "Three-stage adaptive cascade"
+        }
+      }
+    },
+    "blobs": {
+      "trials": [
+        {
+          "seed": 121,
+          "models": [
+            {
+              "model": "MLP",
+              "family": "Neural",
+              "accuracy": 0.9888888888888889,
+              "balanced_accuracy": 0.9888888888888889,
+              "macro_f1": 0.9888875169774046,
+              "fit_seconds": 0.0369474099998115,
+              "predict_seconds": 0.00019520100022418774,
+              "serialized_model_kb": 27.0048828125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Extreme Learning Machine",
+              "family": "Neural / fixed random features",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.0024493690002600488,
+              "predict_seconds": 0.0002727569999478874,
+              "serialized_model_kb": 17.384765625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "fixed width=192"
+            },
+            {
+              "model": "Hyperdimensional prototype",
+              "family": "Alternative representation",
+              "accuracy": 0.9722222222222222,
+              "balanced_accuracy": 0.9722222222222222,
+              "macro_f1": 0.9722007722007722,
+              "fit_seconds": 0.010388727999725234,
+              "predict_seconds": 0.0028127989999120473,
+              "serialized_model_kb": 88.888671875,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "dimensions=1024"
+            },
+            {
+              "model": "RBF network",
+              "family": "Neural / radial basis",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.12488202099984846,
+              "predict_seconds": 0.0004952399999638146,
+              "serialized_model_kb": 7.2490234375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "centers=40"
+            },
+            {
+              "model": "KNN",
+              "family": "Instance-based",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.0009608870000192837,
+              "predict_seconds": 0.001805535000130476,
+              "serialized_model_kb": 62.15234375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Nearest centroid",
+              "family": "Prototype-based",
+              "accuracy": 0.9222222222222223,
+              "balanced_accuracy": 0.9222222222222223,
+              "macro_f1": 0.9217488510744007,
+              "fit_seconds": 0.0008334060003107879,
+              "predict_seconds": 0.0006686660003651923,
+              "serialized_model_kb": 0.845703125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Random forest",
+              "family": "Non-neural baseline",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.11780367500023203,
+              "predict_seconds": 0.005257669000002352,
+              "serialized_model_kb": 192.4287109375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherNet gated expert",
+              "family": "Adaptive hybrid",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.04843590900009076,
+              "predict_seconds": 0.0012150450002081925,
+              "serialized_model_kb": 75.7138671875,
+              "specialist_call_rate": 0.06111111111111111,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherGrow",
+              "family": "Adaptive-width ELM candidate",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.01650621599992519,
+              "predict_seconds": 0.00019172300017089583,
+              "serialized_model_kb": 3.76953125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "selected width=32"
+            },
+            {
+              "model": "AetherCascade",
+              "family": "Three-stage adaptive cascade",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.08471557600023516,
+              "predict_seconds": 0.0007302490002984996,
+              "serialized_model_kb": 87.21484375,
+              "specialist_call_rate": 0.11666666666666667,
+              "elm_call_rate": 0.11666666666666667,
+              "knn_call_rate": 0.0,
+              "architecture_detail": "gate MLP<0.631; ELM<0.000"
+            }
+          ]
+        },
+        {
+          "seed": 152,
+          "models": [
+            {
+              "model": "MLP",
+              "family": "Neural",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.037564302000191674,
+              "predict_seconds": 0.0001928390001921798,
+              "serialized_model_kb": 27.0302734375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Extreme Learning Machine",
+              "family": "Neural / fixed random features",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.004435307999756333,
+              "predict_seconds": 0.00031131700006881147,
+              "serialized_model_kb": 17.384765625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "fixed width=192"
+            },
+            {
+              "model": "Hyperdimensional prototype",
+              "family": "Alternative representation",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.013559635999627062,
+              "predict_seconds": 0.0019342189998496906,
+              "serialized_model_kb": 88.888671875,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "dimensions=1024"
+            },
+            {
+              "model": "RBF network",
+              "family": "Neural / radial basis",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.11542800400002307,
+              "predict_seconds": 0.00065907700036405,
+              "serialized_model_kb": 7.2490234375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "centers=40"
+            },
+            {
+              "model": "KNN",
+              "family": "Instance-based",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.002282997999827785,
+              "predict_seconds": 0.0020661079997807974,
+              "serialized_model_kb": 62.15234375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Nearest centroid",
+              "family": "Prototype-based",
+              "accuracy": 0.9944444444444445,
+              "balanced_accuracy": 0.9944444444444445,
+              "macro_f1": 0.994444272971388,
+              "fit_seconds": 0.0006475549998867791,
+              "predict_seconds": 0.0006949230000827811,
+              "serialized_model_kb": 0.845703125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Random forest",
+              "family": "Non-neural baseline",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.10952146599993284,
+              "predict_seconds": 0.00552997199974925,
+              "serialized_model_kb": 146.3349609375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherNet gated expert",
+              "family": "Adaptive hybrid",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.0463878969999314,
+              "predict_seconds": 0.00031029000001581153,
+              "serialized_model_kb": 75.7421875,
+              "specialist_call_rate": 0.0,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherGrow",
+              "family": "Adaptive-width ELM candidate",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.014052713999717525,
+              "predict_seconds": 0.00017458799993619323,
+              "serialized_model_kb": 3.76953125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "selected width=32"
+            },
+            {
+              "model": "AetherCascade",
+              "family": "Three-stage adaptive cascade",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.08543950800003586,
+              "predict_seconds": 0.00038219599991862196,
+              "serialized_model_kb": 87.240234375,
+              "specialist_call_rate": 0.0,
+              "elm_call_rate": 0.0,
+              "knn_call_rate": 0.0,
+              "architecture_detail": "gate MLP<0.000; ELM<0.000"
+            }
+          ]
+        },
+        {
+          "seed": 183,
+          "models": [
+            {
+              "model": "MLP",
+              "family": "Neural",
+              "accuracy": 0.9833333333333333,
+              "balanced_accuracy": 0.9833333333333334,
+              "macro_f1": 0.9833287024173382,
+              "fit_seconds": 0.043300061999616446,
+              "predict_seconds": 0.0003504869996504567,
+              "serialized_model_kb": 27.0302734375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Extreme Learning Machine",
+              "family": "Neural / fixed random features",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.0029706399996030086,
+              "predict_seconds": 0.00028526799997052876,
+              "serialized_model_kb": 17.384765625,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "fixed width=192"
+            },
+            {
+              "model": "Hyperdimensional prototype",
+              "family": "Alternative representation",
+              "accuracy": 0.9666666666666667,
+              "balanced_accuracy": 0.9666666666666667,
+              "macro_f1": 0.9666625509322139,
+              "fit_seconds": 0.010863741999855847,
+              "predict_seconds": 0.00196760099970561,
+              "serialized_model_kb": 88.888671875,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "dimensions=1024"
+            },
+            {
+              "model": "RBF network",
+              "family": "Neural / radial basis",
+              "accuracy": 0.9944444444444445,
+              "balanced_accuracy": 0.9944444444444445,
+              "macro_f1": 0.994444272971388,
+              "fit_seconds": 0.099733045999983,
+              "predict_seconds": 0.0006527789996653155,
+              "serialized_model_kb": 7.2490234375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "centers=40"
+            },
+            {
+              "model": "KNN",
+              "family": "Instance-based",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.0007514529997934005,
+              "predict_seconds": 0.0022563890001947584,
+              "serialized_model_kb": 62.15234375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Nearest centroid",
+              "family": "Prototype-based",
+              "accuracy": 0.9388888888888889,
+              "balanced_accuracy": 0.9388888888888889,
+              "macro_f1": 0.9387357282094124,
+              "fit_seconds": 0.0010900130000663921,
+              "predict_seconds": 0.0008249439997598529,
+              "serialized_model_kb": 0.845703125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "Random forest",
+              "family": "Non-neural baseline",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.12056389700001091,
+              "predict_seconds": 0.005405765999967116,
+              "serialized_model_kb": 190.8662109375,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherNet gated expert",
+              "family": "Adaptive hybrid",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.05463442900008886,
+              "predict_seconds": 0.0010424179999972694,
+              "serialized_model_kb": 75.7939453125,
+              "specialist_call_rate": 0.09444444444444444,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "\u2014"
+            },
+            {
+              "model": "AetherGrow",
+              "family": "Adaptive-width ELM candidate",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.021275047000017366,
+              "predict_seconds": 0.00022064099994167918,
+              "serialized_model_kb": 3.76953125,
+              "specialist_call_rate": null,
+              "elm_call_rate": null,
+              "knn_call_rate": null,
+              "architecture_detail": "selected width=32"
+            },
+            {
+              "model": "AetherCascade",
+              "family": "Three-stage adaptive cascade",
+              "accuracy": 1.0,
+              "balanced_accuracy": 1.0,
+              "macro_f1": 1.0,
+              "fit_seconds": 0.11001641599978029,
+              "predict_seconds": 0.0011281079996479093,
+              "serialized_model_kb": 87.296875,
+              "specialist_call_rate": 0.16111111111111112,
+              "elm_call_rate": 0.16111111111111112,
+              "knn_call_rate": 0.0,
+              "architecture_detail": "gate MLP<0.719; ELM<0.000"
+            }
+          ]
+        }
+      ],
+      "summary": {
+        "MLP": {
+          "accuracy": {
+            "mean": 0.9907407407407407,
+            "std": 0.006928995160692499
+          },
+          "balanced_accuracy": {
+            "mean": 0.9907407407407408,
+            "std": 0.00692899516069246
+          },
+          "macro_f1": {
+            "mean": 0.9907387397982476,
+            "std": 0.006930767644916108
+          },
+          "fit_seconds": {
+            "mean": 0.03927059133320654,
+            "std": 0.0028603746052602605
+          },
+          "predict_seconds": {
+            "mean": 0.0002461756666889414,
+            "std": 7.376555383643453e-05
+          },
+          "serialized_model_kb": {
+            "mean": 27.021809895833332,
+            "std": 0.011969255410709789
+          },
+          "family": "Neural"
+        },
+        "Extreme Learning Machine": {
+          "accuracy": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "balanced_accuracy": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "macro_f1": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "fit_seconds": {
+            "mean": 0.003285105666539797,
+            "std": 0.0008406961080721834
+          },
+          "predict_seconds": {
+            "mean": 0.0002897806666624092,
+            "std": 1.6062202481507567e-05
+          },
+          "serialized_model_kb": {
+            "mean": 17.384765625,
+            "std": 0.0
+          },
+          "family": "Neural / fixed random features"
+        },
+        "Hyperdimensional prototype": {
+          "accuracy": {
+            "mean": 0.9796296296296296,
+            "std": 0.014581496062984835
+          },
+          "balanced_accuracy": {
+            "mean": 0.9796296296296296,
+            "std": 0.014581496062984835
+          },
+          "macro_f1": {
+            "mean": 0.9796211077109953,
+            "std": 0.014586350055217558
+          },
+          "fit_seconds": {
+            "mean": 0.011604035333069381,
+            "std": 0.0013963500159011367
+          },
+          "predict_seconds": {
+            "mean": 0.0022382063331557824,
+            "std": 0.00040652686585772085
+          },
+          "serialized_model_kb": {
+            "mean": 88.888671875,
+            "std": 0.0
+          },
+          "family": "Alternative representation"
+        },
+        "RBF network": {
+          "accuracy": {
+            "mean": 0.9981481481481481,
+            "std": 0.002618914004394611
+          },
+          "balanced_accuracy": {
+            "mean": 0.9981481481481481,
+            "std": 0.002618914004394611
+          },
+          "macro_f1": {
+            "mean": 0.9981480909904626,
+            "std": 0.0026189948375686016
+          },
+          "fit_seconds": {
+            "mean": 0.11334769033328485,
+            "std": 0.010371869474688988
+          },
+          "predict_seconds": {
+            "mean": 0.00060236533333106,
+            "std": 7.579267330458318e-05
+          },
+          "serialized_model_kb": {
+            "mean": 7.2490234375,
+            "std": 0.0
+          },
+          "family": "Neural / radial basis"
+        },
+        "KNN": {
+          "accuracy": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "balanced_accuracy": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "macro_f1": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "fit_seconds": {
+            "mean": 0.0013317793332134897,
+            "std": 0.00067802574380784
+          },
+          "predict_seconds": {
+            "mean": 0.0020426773333686774,
+            "std": 0.0001848045443883493
+          },
+          "serialized_model_kb": {
+            "mean": 62.15234375,
+            "std": 0.0
+          },
+          "family": "Instance-based"
+        },
+        "Nearest centroid": {
+          "accuracy": {
+            "mean": 0.9518518518518518,
+            "std": 0.030876540741727895
+          },
+          "balanced_accuracy": {
+            "mean": 0.9518518518518518,
+            "std": 0.030876540741727895
+          },
+          "macro_f1": {
+            "mean": 0.9516429507517338,
+            "std": 0.031049459324471344
+          },
+          "fit_seconds": {
+            "mean": 0.0008569913334213197,
+            "std": 0.00018140097653942709
+          },
+          "predict_seconds": {
+            "mean": 0.0007295110000692754,
+            "std": 6.83274009506127e-05
+          },
+          "serialized_model_kb": {
+            "mean": 0.845703125,
+            "std": 0.0
+          },
+          "family": "Prototype-based"
+        },
+        "Random forest": {
+          "accuracy": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "balanced_accuracy": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "macro_f1": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "fit_seconds": {
+            "mean": 0.11596301266672526,
+            "std": 0.0046921813667251625
+          },
+          "predict_seconds": {
+            "mean": 0.005397802333239572,
+            "std": 0.0001113097656949601
+          },
+          "serialized_model_kb": {
+            "mean": 176.54329427083334,
+            "std": 21.370039832217337
+          },
+          "family": "Non-neural baseline"
+        },
+        "AetherNet gated expert": {
+          "accuracy": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "balanced_accuracy": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "macro_f1": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "fit_seconds": {
+            "mean": 0.04981941166670367,
+            "std": 0.0035058885919548766
+          },
+          "predict_seconds": {
+            "mean": 0.0008559176667404245,
+            "std": 0.00039220078473656365
+          },
+          "serialized_model_kb": {
+            "mean": 75.75,
+            "std": 0.033155219730498
+          },
+          "specialist_call_rate": {
+            "mean": 0.05185185185185185,
+            "std": 0.03910872607767199
+          },
+          "family": "Adaptive hybrid"
+        },
+        "AetherGrow": {
+          "accuracy": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "balanced_accuracy": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "macro_f1": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "fit_seconds": {
+            "mean": 0.017277992333220027,
+            "std": 0.0029985832791815255
+          },
+          "predict_seconds": {
+            "mean": 0.00019565066668292275,
+            "std": 1.9005080470733706e-05
+          },
+          "serialized_model_kb": {
+            "mean": 3.76953125,
+            "std": 0.0
+          },
+          "family": "Adaptive-width ELM candidate"
+        },
+        "AetherCascade": {
+          "accuracy": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "balanced_accuracy": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "macro_f1": {
+            "mean": 1.0,
+            "std": 0.0
+          },
+          "fit_seconds": {
+            "mean": 0.0933905000000171,
+            "std": 0.011760012230959344
+          },
+          "predict_seconds": {
+            "mean": 0.0007468509999550103,
+            "std": 0.00030474349610722584
+          },
+          "serialized_model_kb": {
+            "mean": 87.25065104166667,
+            "std": 0.0342895679225617
+          },
+          "specialist_call_rate": {
+            "mean": 0.0925925925925926,
+            "std": 0.06794050491794126
+          },
+          "elm_call_rate": {
+            "mean": 0.0925925925925926,
+            "std": 0.06794050491794126
+          },
+          "knn_call_rate": {
+            "mean": 0.0,
+            "std": 0.0
+          },
+          "family": "Three-stage adaptive cascade"
+        }
+      }
+    }
+  }
+}
