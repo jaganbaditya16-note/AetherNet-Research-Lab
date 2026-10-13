@@ -16,7 +16,12 @@ class Handler(SimpleHTTPRequestHandler):
 
     def do_GET(self):
         if self.path == "/api/status":
-            body = json.dumps({"ok": True, "version": "0.2.0", "bind": "127.0.0.1"}).encode()
+            body = json.dumps({
+                "ok": True,
+                "version": "0.3.0",
+                "bind": "127.0.0.1",
+                "datasets": ["moons", "circles", "mixed_tabular", "blobs", "breast_cancer", "wine", "digits"],
+            }).encode()
             self.send_response(200); self.send_header("Content-Type", "application/json")
             self.send_header("Content-Length", str(len(body))); self.end_headers(); self.wfile.write(body)
             return
@@ -56,7 +61,7 @@ class Handler(SimpleHTTPRequestHandler):
             self.send_header("Content-Length", str(len(body))); self.end_headers(); self.wfile.write(body)
 
 if __name__ == "__main__":
-    print("AetherNet Research Lab 0.2.0")
+    print("AetherNet Research Lab 0.3.0")
     print("Local only: http://127.0.0.1:8010")
     print("Press Ctrl+C to stop. Benchmark data stays on this computer.")
     ThreadingHTTPServer(("127.0.0.1", 8010), Handler).serve_forever()
