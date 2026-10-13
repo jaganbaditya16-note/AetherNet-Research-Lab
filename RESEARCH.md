@@ -1,4 +1,4 @@
-# AetherNet Lab 0.2.0 — architecture landscape and hypotheses
+# AetherNet Lab 0.3.0 — architecture landscape and hypotheses
 
 ## Established methods included as baselines
 
@@ -42,13 +42,17 @@ This repository-oriented scan is a starting point, not an exhaustive novelty sea
 
 The current route penalty uses hand-chosen weights (ELM call = 0.5 units; KNN call = 1 unit) for an experiment. It is not an empirically measured cost model. A follow-up should replace it with a cost estimate measured on the target hardware and test whether the policy transfers across tasks.
 
+## Prior art: adaptive network width is already a research topic
+
+AetherGrow's current method is a small ELM-style width-selection baseline. It must not be described as a first-ever adaptive-width architecture. An official ICLR 2026 implementation called Adaptive Width Neural Networks learns how wide layers should be across MLPs, CNNs/ResNets, RNNs, Transformers and graph networks: https://github.com/nec-research/Adaptive-Width-Neural-Networks. This is a direct reason to narrow originality claims and compare against existing work before further naming or branding.
+
 ## Research plan
 
-1. Run a reproducible multi-seed benchmark on synthetic datasets.
-2. Add strong baselines and real public tabular datasets.
-3. Use nested validation or a separate calibration set to prevent test leakage.
-4. Compare at matched latency/cost budgets, not accuracy alone.
-5. Perform ablations: remove ELM, remove KNN, change gates, and vary the routing penalty.
+1. Keep synthetic tasks as smoke tests and include bundled Breast Cancer Wisconsin Diagnostic, Wine, and Digits datasets; see `docs/BENCHMARK_PROTOCOL.md`.
+2. Run repeated seeds, then move to nested validation or repeated stratified cross-validation on more diverse public datasets.
+3. Compare at matched accuracy/cost budgets, not accuracy alone.
+4. Perform ablations: remove ELM, remove KNN, change gates, and vary the routing penalty.
+5. Measure on the target laptop as well as CI; do not treat another machine's timings as the user's.
 6. Publish all results, including runs where the candidate loses.
 
 ## Novelty boundary

@@ -1,10 +1,12 @@
-# AetherNet Research Lab 0.2.0
+# AetherNet Research Lab 0.3.0
 
 A local, zero-paid-API model laboratory for comparing different learning mechanisms. It is designed to run on an ordinary Windows laptop using Python and scikit-learn. It does **not** need a GPU or cloud inference service for these small experiments; the work uses the host computer's physical resources, normally its CPU.
 
-## What's new in 0.2.0
+## What's new in 0.3.0
 
 - A local-only browser dashboard with live benchmark controls, result table, JSON export, and CSV export.
+- Seven tasks: four generated synthetic tasks plus three real datasets bundled with scikit-learn (Breast Cancer Wisconsin Diagnostic, Wine, and Digits). No data download is needed for these benchmark paths.
+- Dataset provenance and actual sample counts are included in exported JSON. The sample control is a maximum; Wine has 178 rows and is used in full.
 - Model comparisons: MLP, Extreme Learning Machine-style fixed random features, hyperdimensional prototype classifier, RBF network, KNN, nearest centroid, random forest, the original AetherNet gated KNN hybrid, AetherGrow (validation-selected hidden width), and AetherCascade.
 - Per-model held-out accuracy, balanced accuracy, macro-F1, fit time, prediction time, serialized model size, and expert routing rate where applicable.
 - Tests for the new architecture implementations and benchmark wiring.
@@ -38,7 +40,11 @@ For a quicker run:
 .\.venv\Scripts\python.exe benchmarks_v2.py --repeats 1 --samples 500 --dataset moons
 ```
 
-Results are saved in `results_v2.json` in the project folder. All datasets are generated locally; no benchmark data is uploaded.
+Results are saved in `results_v3.json` by default; `results_v2.json` is the historical 0.2.0 snapshot. Synthetic tasks are generated locally; bundled real datasets are loaded from scikit-learn. No benchmark data is uploaded.
+
+## User value, limitations, and protocol
+
+See [`docs/USER_VALUE_AND_LIMITATIONS.md`](docs/USER_VALUE_AND_LIMITATIONS.md) for the person-oriented value proposition, trade-offs, scalability and privacy limits. See [`docs/BENCHMARK_PROTOCOL.md`](docs/BENCHMARK_PROTOCOL.md) for data provenance and evaluation details.
 
 ## Candidate architecture: AetherGrow
 
@@ -66,6 +72,10 @@ The routing thresholds are selected using a calibration split of the training da
 
 Not established. MLPs, ELMs, hyperdimensional computing, RBF networks, nearest-neighbor methods, random forests and cascaded/adaptive inference all have prior art. AetherCascade is a candidate composition and routing experiment, not a verified first-ever invention. A meaningful original contribution would require a well-defined new mechanism plus reproducible gains over strong baselines on multiple public real-world datasets.
 
+## Continuous integration
+
+GitHub Actions runs the unit tests on Python 3.11 and 3.12 and runs a short bundled Wine-dataset benchmark on pushes and pull requests.
+
 ## Safety and privacy
 
-The benchmark uses locally generated synthetic data. Do not upload private data to public repositories. The server is intentionally restricted to loopback; do not change its bind address unless you understand the security implications.
+Synthetic benchmarks are generated locally; the three real benchmark datasets are bundled with scikit-learn and are loaded locally. No benchmark rows are uploaded by the app. Do not commit private datasets, local exports, credentials, or API keys to this public repository. The server is intentionally restricted to loopback (`127.0.0.1`); do not change its bind address unless you understand the security implications.
