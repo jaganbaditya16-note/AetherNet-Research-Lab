@@ -40,7 +40,7 @@ For a quicker run:
 .\.venv\Scripts\python.exe benchmarks_v2.py --repeats 1 --samples 500 --dataset moons
 ```
 
-Results are saved in `results_v2.json` by default. For a 0.3.0 snapshot, pass `--output results_v3.json`. Synthetic tasks are generated locally; bundled real datasets are loaded from scikit-learn. No benchmark data is uploaded.
+Results are saved in `results_v3.json` by default; `results_v2.json` is the historical 0.2.0 snapshot. Synthetic tasks are generated locally; bundled real datasets are loaded from scikit-learn. No benchmark data is uploaded.
 
 ## User value, limitations, and protocol
 
