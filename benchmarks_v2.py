@@ -224,7 +224,7 @@ def main() -> None:
     parser.add_argument("--repeats", type=int, default=3)
     parser.add_argument("--samples", type=int, default=900)
     parser.add_argument("--dataset", choices=list(DATASETS) + ["all"], default="all")
-    parser.add_argument("--output", type=Path, default=Path("results_v2.json"))
+    parser.add_argument("--output", type=Path, default=Path("results_v3.json"))
     args = parser.parse_args()
     datasets = list(DATASETS) if args.dataset == "all" else [args.dataset]
     results = run_suite(args.repeats, args.samples, datasets)
