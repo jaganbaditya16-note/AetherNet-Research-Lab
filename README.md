@@ -78,4 +78,4 @@ GitHub Actions runs the unit tests on Python 3.11 and 3.12 and runs a short bund
 
 ## Safety and privacy
 
-The benchmark uses locally generated synthetic data. Do not upload private data to public repositories. The server is intentionally restricted to loopback; do not change its bind address unless you understand the security implications.
+Synthetic benchmarks are generated locally; the three real benchmark datasets are bundled with scikit-learn and are loaded locally. No benchmark rows are uploaded by the app. Do not commit private datasets, local exports, credentials, or API keys to this public repository. The server is intentionally restricted to loopback (`127.0.0.1`); do not change its bind address unless you understand the security implications.
